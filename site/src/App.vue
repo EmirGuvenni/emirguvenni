@@ -124,7 +124,7 @@
         <div>
           <h1 class="text-5xl font-semibold text-black py-5">Contact me</h1>
           <pre class="text-left mx-auto inline">
-Mail: <a href="mailto:eguvenni@gmail.com" class="text-blue-700" id="mail">eguvenni@gmail.com</a></pre>
+Mail: <a href="mailto:contact@emirguvenni.com" class="text-blue-700" id="mail">contact@emirguvenni.com</a></pre>
         </div>
       </div>
     </full-page>
