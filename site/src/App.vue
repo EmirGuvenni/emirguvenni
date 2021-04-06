@@ -49,7 +49,7 @@
             <p
               class="text-black text-opacity-80 font-normal py-3 max-w-3xl mx-auto text-lg"
             >
-              I'm a junior software developer familiar with languages like
+              I'm a software developer familiar with languages like
               TypeScript, Kotlin, Python, C#, Java and experienced in
               technologies such as MongoDB, Vue, Express, Discord.js, Bash. I'm
               always looking to learn new things and looking for new
@@ -72,23 +72,24 @@
               <!-- Botsons -->
               <a
                 id="botsons"
-                href="https://botsons.com"
-                target="_blank"
+                href="#"
                 class="h-32 w-72 rounded-lg p-6"
               >
                 <div>
                   <h2 class="text-white font-semibold">Botsons</h2>
                   <p class="text-white opacity-80">
-                    Moderation and automation bot. Made with Discord.js.
+                    Coming soon
                   </p>
                 </div>
               </a>
               <!-- Spyfall -->
-              <a id="spyfall" href="" class="h-32 w-72 rounded-lg p-6">
+              <a id="spyfall" 
+              href="#" 
+              class="h-32 w-72 rounded-lg p-6">
                 <div>
                   <h2 class="text-white font-semibold">Spyfall</h2>
                   <p class="text-white opacity-80">
-                    Spyfall is a question based multiplayer tabletop game.
+                    Coming soon
                   </p>
                 </div>
               </a>
