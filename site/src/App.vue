@@ -1,12 +1,15 @@
 <template>
-  <div id="app" class="container-flex justify-center">
+  <div id="app" class="container-flex justify-center bg-white rounded-3xl">
     <full-page ref="fullpage" :options="options">
       <!-- Hello -->
       <div class="section">
         <div class="text-center">
-          <h1 class="text-6xl font-semibold text-black" id="hello-msg">
+          <h1 class="text-6xl font-semibold text-black p-2" id="hello-msg">
             Hello!
           </h1>
+          <h2 class="text-xl font-medium text-gray-600 p-2">
+            I'm Emir, Back-end Developer
+          </h2>
           <div class="scroll-down svg" id="home-scroll-down">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -45,15 +48,14 @@
             class="flex rounded-full w-48 h-48 md:w-64 md:h-64 mx-auto m-4"
           />
           <div class="text-center md:py-1 md:px-1">
-            <h1 class="font-semibold text-4xl p-2 md:text-5xl">I'm Emir</h1>
+            <h1 class="font-semibold text-4xl p-2 md:text-5xl">Emir Güvenni</h1>
             <p
               class="text-black text-opacity-80 font-normal py-3 max-w-3xl mx-auto text-lg"
             >
-              I'm a software developer familiar with languages like
-              TypeScript, Kotlin, Python, C#, Java and experienced in
-              technologies such as MongoDB, Vue, Express, Discord.js, Bash. I'm
-              always looking to learn new things and looking for new
-              opportunities.
+              I'm a back-end developer familiar with languages like TypeScript,
+              Kotlin, Python, C#, Java and experienced in technologies such as
+              MongoDB, Vue, Express, Discord.js. I'm always looking to learn new
+              things and looking for new opportunities.
             </p>
           </div>
         </figure>
@@ -70,27 +72,17 @@
               class="grid grid-flow-row grid-rows-3 grid-cols-1 md:grid-rows-2 md:grid-cols-3 gap-1 md:gap-0 justify-items-center md:mt-10"
             >
               <!-- Botsons -->
-              <a
-                id="botsons"
-                href="#"
-                class="h-32 w-72 rounded-lg p-6"
-              >
+              <a id="botsons" href="#" class="h-32 w-72 rounded-lg p-6">
                 <div>
                   <h2 class="text-white font-semibold">Botsons</h2>
-                  <p class="text-white opacity-80">
-                    Coming soon
-                  </p>
+                  <p class="text-white opacity-80">Coming soon</p>
                 </div>
               </a>
               <!-- Spyfall -->
-              <a id="spyfall" 
-              href="#" 
-              class="h-32 w-72 rounded-lg p-6">
+              <a id="spyfall" href="#" class="h-32 w-72 rounded-lg p-6">
                 <div>
                   <h2 class="text-white font-semibold">Spyfall</h2>
-                  <p class="text-white opacity-80">
-                    Coming soon
-                  </p>
+                  <p class="text-white opacity-80">Coming soon</p>
                 </div>
               </a>
               <!-- Type-Streak -->
@@ -123,9 +115,12 @@
       <!-- Contact -->
       <div class="section text-center">
         <div>
-          <h1 class="text-5xl font-semibold text-black py-5">Contact me</h1>
-          <pre class="text-left mx-auto inline">
-Mail: <a href="mailto:contact@emirguvenni.com" class="text-blue-700" id="mail">contact@emirguvenni.com</a></pre>
+          <h1 class="text-5xl font-semibold text-black py-5">Links</h1>
+          <pre class="text-left mx-auto inline links text-lg">
+Mail: <a href="mailto:contact@emirguvenni.com" class="text-blue-700">contact@emirguvenni.com</a>
+GitHub: <a href="https://github.com/EmirGuvenni" class="text-blue-700">EmirGuvenni</a>
+LinkedIn: <a href="https://www.linkedin.com/in/emir-g%C3%BCvenni-4099551a2/" class="text-blue-700">Emir Güvenni</a>
+</pre>
         </div>
       </div>
     </full-page>
@@ -141,6 +136,9 @@ export default {
         menu: "#menu",
         navigation: true,
         anchors: ["hello", "about", "project", "contact"],
+        animateAnchor: false,
+        recordHistory: false,
+        lockAnchors: true,
       },
     };
   },
@@ -152,11 +150,17 @@ export default {
 * {
   font-family: "Poppins";
 }
-#mail {
-  font-family: "consolas";
+
+#app {
+  margin: .69%;
 }
+
 #hello-msg {
   animation: fadeIn ease 1.31s;
+}
+
+.links, .links > a{
+  font-family: monospace;
 }
 
 @keyframes fadeIn {
