@@ -1,10 +1,10 @@
-import Vue from 'vue'
-import App from './App.vue'
-import './index.css'
-import VueFullPage from 'vue-fullpage.js'
+import { createApp } from "vue";
+import VueFullPage from "vue-fullpage.js";
+import App from "./App.vue";
+import "./index.css";
 
-Vue.use(VueFullPage);
+const app = createApp(App);
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+app.use(VueFullPage);
+
+app.mount("#app");
