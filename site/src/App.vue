@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="justify-center bg-white container-flex rounded-3xl">
+  <div id="app" class="justify-center bg-white container-flex">
     <full-page ref="fullpage" :options="options">
       <!-- Hello -->
       <div class="section">
@@ -112,12 +112,14 @@ const options = {
   font-family: "Poppins";
 }
 
-#app {
-  margin: 0.69%;
-}
-
 #hello-msg {
   animation: fadeIn ease 1.31s;
+}
+
+.fp-warning,
+.fp-watermark a {
+  color: white !important;
+  display: none !important;
 }
 
 .links,
