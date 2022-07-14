@@ -32,9 +32,9 @@
             <h1 class="p-2 text-4xl font-semibold md:text-5xl">Emir Güvenni</h1>
             <p class="max-w-3xl py-3 mx-auto text-lg font-normal text-black text-opacity-80">
               I'm a back-end developer familiar with languages like TypeScript,
-              Kotlin, Python, C#, Java and experienced in technologies such as
-              MongoDB, Vue, Express, Discord.js. I'm always looking to learn new
-              things and looking for new opportunities.
+              GO, Python, PHP, Solidity and experienced in technologies such as
+              MongoDB, PostgreSQL, Git, Vue.js, Express.js, Laravel and many more... I'm always looking to learn new
+              things and new opportunities.
             </p>
           </div>
         </figure>
