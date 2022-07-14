@@ -77,9 +77,9 @@
         <div>
           <h1 class="py-5 text-5xl font-semibold text-black">Links</h1>
           <pre class="inline mx-auto text-lg text-left links">
-Mail: <a href="mailto:contact@emirguvenni.com" class="text-blue-700">contact@emirguvenni.com</a>
-GitHub: <a href="https://github.com/EmirGuvenni" class="text-blue-700">EmirGuvenni</a>
-LinkedIn: <a href="https://www.linkedin.com/in/emir-g%C3%BCvenni-4099551a2/" class="text-blue-700">Emir Güvenni</a>
+Mail: <a href="mailto:contact@emirguvenni.com" target="_blank" class="text-blue-700">contact@emirguvenni.com</a>
+GitHub: <a href="https://github.com/EmirGuvenni" target="_blank" class="text-blue-700">EmirGuvenni</a>
+LinkedIn: <a href="https://www.linkedin.com/in/emirg%C3%BCvenni/" target="_blank" class="text-blue-700">Emir Güvenni</a>
 </pre>
         </div>
       </div>
