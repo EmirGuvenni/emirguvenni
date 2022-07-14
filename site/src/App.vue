@@ -47,20 +47,13 @@
           </div>
           <div class="py-4"></div>
           <div class="text-center">
-            <div
-              class="grid grid-flow-row grid-cols-1 grid-rows-3 gap-1 md:grid-rows-2 md:grid-cols-3 md:gap-0 justify-items-center md:mt-10">
-              <!-- Botsons -->
-              <a id="botsons" href="#" class="h-32 p-6 rounded-lg w-72">
+            <div class="flex flex-col items-center justify-center mb-4 space-y-4 md:flex-row md:space-x-8 md:space-y-0">
+              <!-- Mass Wallet Generator -->
+              <a id="mass-wallet-generator" href="https://github.com/EmirGuvenni/Mass-Wallet-Generator"
+                class="h-32 p-6 rounded-lg w-72">
                 <div>
-                  <h2 class="font-semibold text-white">Botsons</h2>
-                  <p class="text-white opacity-80">Coming soon</p>
-                </div>
-              </a>
-              <!-- Spyfall -->
-              <a id="spyfall" href="#" class="h-32 p-6 rounded-lg w-72">
-                <div>
-                  <h2 class="font-semibold text-white">Spyfall</h2>
-                  <p class="text-white opacity-80">Coming soon</p>
+                  <h2 class="font-semibold text-white">Mass Wallet Generator</h2>
+                  <p class="text-white opacity-80">Generate as many wallets as you want.</p>
                 </div>
               </a>
               <!-- Type-Streak -->
@@ -250,22 +243,10 @@ svg {
 }
 
 ///////////////////////////////////
-#botsons {
+#mass-wallet-generator {
   background: #3a7bd5;
-  background: -webkit-linear-gradient(to right, #3a6073, #3a7bd5);
-  background: linear-gradient(to right, #3a6073, #3a7bd5);
-
-  transition: 0.3s ease;
-
-  &:hover {
-    opacity: 0.85;
-  }
-}
-
-#spyfall {
-  background: #3a7bd5;
-  background: -webkit-linear-gradient(to right, #3a6073, #3a7bd5);
-  background: linear-gradient(to right, #3a6073, #3a7bd5);
+  background: -webkit-linear-gradient(to right, #3a6073, #38485f);
+  background: linear-gradient(to right, #3a6073, #38485f);
 
   transition: 0.3s ease;
 
