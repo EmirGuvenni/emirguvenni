@@ -5,18 +5,9 @@
   "trailingComma": "all",
   "bracketSpacing": true,
   "useTabs": false,
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports"
-  ],
-  "importOrderParserPlugins": [
-    "typescript",
-    "jsx",
-    "decorators-legacy"
-  ],
-  "importOrder": [
-    "^components/(.*)$",
-    "^[./]"
-  ],
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "importOrder": ["^components/(.*)$", "^@/(.*)$", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "printWidth": 100
