@@ -1,10 +1,27 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Geist, Geist_Mono, Inter } from 'next/font/google';
+
+import { ThemeProvider } from '@/components/providers/theme-provider';
+import { Footer } from '@/components/shared/footer';
+import { Header } from '@/components/shared/header';
 
 import './globals.css';
 
+// Default font
 const inter = Inter({
-  variable: '--font-inter',
+  variable: '--font-sans',
+  subsets: ['latin'],
+});
+
+// Used for the logo
+const geist = Geist({
+  variable: '--font-geist',
+  subsets: ['latin'],
+});
+
+// Used for code blocks and monospace text
+const geistMono = Geist_Mono({
+  variable: '--font-mono',
   subsets: ['latin'],
 });
 
@@ -19,8 +36,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
+      <body className="flex min-h-full flex-col">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
