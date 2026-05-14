@@ -22,9 +22,9 @@ export default function Home() {
     title: 'otofix.io',
     description:
       'CRM system for car/motorcycle repair shops. Keep a tab on your branches, employees and customers.',
-    workingOn: 'Building database tables',
+    workingOn: 'Building the backend architecture',
     activity: 'Under Development',
-    progress: 12,
+    progress: 6,
   };
 
   const projects = _projects.slice(0, 3);
