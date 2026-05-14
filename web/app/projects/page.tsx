@@ -1,38 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import { ProjectCardProps, ProjectTable } from '@/components/shared/project-table';
+import { HealthStatus, checkAllHealth } from '@/app/actions/healthcheck';
+import { projects } from '@/app/projects';
+import { ProjectTable } from '@/components/shared/project-table';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-const projects: (ProjectCardProps & { categories: string[] })[] = [
-  {
-    title: 'Planla',
-    href: '/projects/planla',
-    shortDescription: 'Easy-to-use and fun story point estimations.',
-    status: 'Maintained',
-    stack: ['Next.js', 'Express.js', 'Socket.IO'],
-    year: 2024,
-    categories: ['web'],
-  },
-  {
-    title: 'otofix.io',
-    href: '/projects/otofix',
-    shortDescription: 'CRM system for car/motorcycle repair shops.',
-    status: 'Active Development',
-    stack: ['Next.js', 'Express.js', 'Prisma'],
-    image: 'https://picsum.photos/536/354',
-    year: 2026,
-    categories: ['web'],
-  },
-];
+type CheckStatus = HealthStatus | 'Checking';
 
-const healthchecks: { title: string; status: 'Healthy' | 'Degraded' | 'Offline' }[] = [
-  { title: 'Planla Frontend', status: 'Healthy' },
-  { title: 'Planla Backend', status: 'Degraded' },
-];
+const healthchecks = [
+  { title: 'Planla Frontend', key: 'planlaFrontend' },
+  { title: 'Planla Backend', key: 'planlaBackend' },
+  { title: 'Type Streak', key: 'typeStreak' },
+] as const;
 
-const getStatusClasses = (status: 'Healthy' | 'Degraded' | 'Offline') => {
+const getStatusClasses = (status: CheckStatus) => {
   switch (status) {
     case 'Healthy':
       return 'text-green-500 dark:text-green-400';
@@ -41,7 +24,7 @@ const getStatusClasses = (status: 'Healthy' | 'Degraded' | 'Offline') => {
     case 'Offline':
       return 'text-red-500 dark:text-red-400';
     default:
-      return '';
+      return 'text-muted-foreground animate-pulse';
   }
 };
 
@@ -49,6 +32,19 @@ const allCategories = ['all', ...Array.from(new Set(projects.flatMap((p) => p.ca
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState('all');
+  const [statuses, setStatuses] = useState<{
+    planlaFrontend: CheckStatus;
+    planlaBackend: CheckStatus;
+    typeStreak: CheckStatus;
+  }>({
+    planlaFrontend: 'Checking',
+    planlaBackend: 'Checking',
+    typeStreak: 'Checking',
+  });
+
+  useEffect(() => {
+    checkAllHealth().then(setStatuses);
+  }, []);
 
   const filtered =
     activeTab === 'all' ? projects : projects.filter((p) => p.categories.includes(activeTab));
@@ -66,13 +62,13 @@ export default function Projects() {
       <div className="space-y-4">
         <div className="bg-card rounded-xl border px-6 py-4">
           <h2 className="mb-4 text-xl font-bold">Statuses</h2>
-          {healthchecks.map((check, index) => (
+          {healthchecks.map(({ title, key }, index) => (
             <div
-              key={check.title}
+              key={title}
               className={`flex items-center justify-between py-2 ${index < healthchecks.length - 1 && 'border-b'}`}
             >
-              <span className="font-semibold">{check.title}</span>
-              <span className={getStatusClasses(check.status)}>● {check.status}</span>
+              <span className="font-semibold">{title}</span>
+              <span className={getStatusClasses(statuses[key])}>● {statuses[key]}</span>
             </div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import { MoveRightIcon } from 'lucide-react';
 import Link from 'next/link';
 
+import { projects as _projects } from '@/app/projects';
 import { ProjectCardProps, ProjectTable } from '@/components/shared/project-table';
 import { Button } from '@/components/ui/button';
 import { Field, FieldLabel } from '@/components/ui/field';
@@ -16,25 +17,7 @@ export default function Home() {
     progress: 12,
   };
 
-  const projects: ProjectCardProps[] = [
-    {
-      title: 'Planla',
-      href: '/projects/planla',
-      shortDescription: 'Easy-to-use and fun story point estimations.',
-      status: 'Maintained',
-      stack: ['Next.js', 'Express.js', 'Socket.IO'],
-      year: 2024,
-    },
-    {
-      title: 'otofix.io',
-      href: '/projects/otofix',
-      shortDescription: 'CRM system for car/motorcycle repair shops.',
-      status: 'Active Development',
-      stack: ['Next.js', 'Express.js', 'Prisma'],
-      image: 'https://picsum.photos/536/354',
-      year: 2026,
-    },
-  ];
+  const projects = _projects.slice(0, 2);
 
   return (
     <div className="container mx-auto my-12 space-y-16 px-6 lg:space-y-28">
