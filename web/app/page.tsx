@@ -18,8 +18,7 @@ export default function Home() {
 
   const projects: ProjectCardProps[] = [
     {
-      title: 'planla.io',
-      monoTitle: true,
+      title: 'Planla',
       href: '/projects/planla',
       shortDescription: 'Easy-to-use and fun story point estimations.',
       status: 'Maintained',
@@ -28,7 +27,6 @@ export default function Home() {
     },
     {
       title: 'otofix.io',
-      monoTitle: true,
       href: '/projects/otofix',
       shortDescription: 'CRM system for car/motorcycle repair shops.',
       status: 'Active Development',
