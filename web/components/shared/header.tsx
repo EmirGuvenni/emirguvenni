@@ -91,8 +91,11 @@ export function Header() {
       {/* Mobile menu */}
       {isOpen && (
         <>
-          <div className="fixed inset-0 bg-black/60 md:hidden" onClick={() => setIsOpen(false)} />
-          <nav className="bg-secondary text-secondary-foreground fixed right-4 bottom-4 left-4 rounded-xl py-8 md:hidden">
+          <div
+            className="fixed inset-0 z-50 bg-black/60 md:hidden"
+            onClick={() => setIsOpen(false)}
+          />
+          <nav className="bg-secondary text-secondary-foreground fixed right-4 bottom-4 left-4 z-51 rounded-xl py-8 md:hidden">
             <ul className="flex flex-col gap-1 font-semibold">
               {headerLinks.map((link) => (
                 <Link key={link.href} href={link.href} onClick={() => setIsOpen(false)}>
