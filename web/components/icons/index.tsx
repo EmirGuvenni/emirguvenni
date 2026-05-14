@@ -1,2 +1,14 @@
+export { DockerIcon } from './docker';
+export { ExpressIcon } from './expressjs';
 export { GithubIcon } from './github';
 export { LinkedInIcon } from './linkedin';
+export { MongoDBIcon } from './mongodb';
+export { NextjsIcon } from './nextjs';
+export { NginxIcon } from './nginx';
+export { NodejsIcon } from './nodejs';
+export { PostgreSQLIcon } from './postgresql';
+export { PrismaIcon } from './prisma';
+export { ReactIcon } from './react';
+export { RedisIcon } from './redis';
+export { TailwindCSSIcon } from './tailwindcss';
+export { TypeScriptIcon } from './typescript';
