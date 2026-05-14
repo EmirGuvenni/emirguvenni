@@ -67,7 +67,26 @@ export default function About() {
         <h2 className="text-xl font-bold">A couple of things I&apos;m happy to point at</h2>
         <div className="space-y-3">
           <div className="bg-card space-y-1 rounded-xl border px-6 py-5">
-            <Link href="/projects/planla" className="font-semibold hover:underline">
+            <Link
+              href="https://invest.papara.com/"
+              target="_blank"
+              className="font-semibold hover:underline"
+            >
+              Papara Invest
+            </Link>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              the public site for Papara Invest, the brokerage arm of one of Turkey&apos;s largest
+              fintechs. It surfaces stock prices, market news, blog posts, and investment content.
+              I&apos;ve been involved with the project since earlier in development and have been
+              shipping features into it as it&apos;s grown.
+            </p>
+          </div>
+          <div className="bg-card space-y-1 rounded-xl border px-6 py-5">
+            <Link
+              href="https://www.planla.io/"
+              target="_blank"
+              className="font-semibold hover:underline"
+            >
               Planla.io
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -77,7 +96,13 @@ export default function About() {
             </p>
           </div>
           <div className="bg-card space-y-1 rounded-xl border px-6 py-5">
-            <span className="font-semibold">Type-Streak</span>
+            <Link
+              href="https://type-streak.emirguvenni.com/"
+              target="_blank"
+              className="font-semibold hover:underline"
+            >
+              Type-Streak
+            </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               A typing trainer I built years ago. Still like the idea enough that a rewrite with new
               features is on the list.
