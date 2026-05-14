@@ -2,6 +2,16 @@ import { ProjectCardProps } from '@/components/shared/project-table';
 
 export const projects: (ProjectCardProps & { categories: string[] })[] = [
   {
+    title: 'Papara Invest',
+    href: 'https://invest.papara.com/',
+    shortDescription: 'An investment platform for the Papara ecosystem.',
+    status: 'On Hold (Live)',
+    stack: ['Next.js', 'Fastify'],
+    year: 2025,
+    image: 'https://invest.papara.com/favicons/icon-32.png',
+    categories: ['web'],
+  },
+  {
     title: 'Planla',
     href: 'https://www.planla.io/',
     shortDescription: 'Easy-to-use and fun story point estimations.',
@@ -14,7 +24,7 @@ export const projects: (ProjectCardProps & { categories: string[] })[] = [
   {
     title: 'Type-Streak',
     href: 'https://type-streak.emirguvenni.com/',
-    shortDescription: '',
+    shortDescription: 'A streak-based typing game focused on speed and accuracy.',
     status: 'Maintained',
     stack: ['Vue.js'],
     year: 2021,

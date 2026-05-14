@@ -11,7 +11,14 @@ export interface ProjectCardProps {
   monoTitle?: boolean;
   shortDescription: string;
   href?: string;
-  status: 'Maintained' | 'Active Development' | 'Under Development' | 'Archived' | 'Deprecated';
+  status:
+    | 'Maintained'
+    | 'Active Development'
+    | 'On Hold (Live)'
+    | 'Under Development'
+    | 'Archived'
+    | 'On Hold'
+    | 'Deprecated';
   image?: string;
   stack: string[];
   year: number;
@@ -20,9 +27,11 @@ export interface ProjectCardProps {
 const getStatusClasses = (status: ProjectCardProps['status']) => {
   switch (status) {
     case 'Maintained':
-    case 'Active Development': {
+    case 'Active Development':
+    case 'On Hold (Live)': {
       return 'bg-green-50 text-green-500 dark:bg-green-950 dark:text-green-400!';
     }
+    case 'On Hold':
     case 'Archived':
     case 'Under Development': {
       return 'bg-yellow-100 text-yellow-600 dark:bg-yellow-950 dark:text-yellow-400!';
