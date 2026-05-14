@@ -1,0 +1,12 @@
+/* TEAM */
+Developer: Emir Güvenni
+Site: emirguvenni.com
+GitHub: https://github.com/EmirGuvenni
+LinkedIn: https://linkedin.com/in/emirguvenni
+From: Istanbul, Turkey
+
+/* SITE */
+Language: English
+Site URL: https://emirguvenni.com
+Contact: contact@emirguvenni.com
+Built with: Next.js, Tailwind CSS
