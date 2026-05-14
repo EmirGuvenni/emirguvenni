@@ -21,13 +21,13 @@ const getStatusClasses = (status: ProjectCardProps['status']) => {
   switch (status) {
     case 'Maintained':
     case 'Active Development': {
-      return 'bg-green-50 text-green-500 dark:bg-green-950 dark:text-green-400';
+      return 'bg-green-50 text-green-500 dark:bg-green-950 dark:text-green-400!';
     }
     case 'Archived': {
-      return 'bg-yellow-50 text-yellow-500 dark:bg-yellow-950 dark:text-yellow-400';
+      return 'bg-yellow-50 text-yellow-500 dark:bg-yellow-950 dark:text-yellow-400!';
     }
     case 'Deprecated': {
-      return 'bg-red-50 text-red-500 dark:bg-red-950 dark:text-red-400';
+      return 'bg-red-50 text-red-500 dark:bg-red-950 dark:text-red-400!';
     }
   }
 };
