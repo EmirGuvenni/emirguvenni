@@ -21,7 +21,7 @@ const geist = Geist({
 
 // Used for code blocks and monospace text
 const geistMono = Geist_Mono({
-  variable: '--font-mono',
+  variable: '--font-geist-mono',
   subsets: ['latin'],
 });
 
@@ -36,7 +36,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${geist.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
       <body className="flex min-h-full flex-col">
         <ThemeProvider
           attribute="class"
