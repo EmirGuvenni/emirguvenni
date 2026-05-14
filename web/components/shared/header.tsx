@@ -3,10 +3,10 @@
 import {
   FolderClosedIcon,
   HomeIcon,
-  LayersIcon,
   MenuIcon,
   MoonIcon,
   SunIcon,
+  UserIcon,
   XIcon,
 } from 'lucide-react';
 import { useTheme } from 'next-themes';
@@ -19,7 +19,7 @@ import { footerLinks } from '@/components/shared/footer';
 const headerLinks = [
   { href: '/', label: '/home', icon: <HomeIcon size={24} /> },
   { href: '/projects', label: '/projects', icon: <FolderClosedIcon size={24} /> },
-  { href: '/stack', label: '/stack', icon: <LayersIcon size={24} /> },
+  { href: '/about', label: '/about', icon: <UserIcon size={24} /> },
 ];
 
 export function Header() {
