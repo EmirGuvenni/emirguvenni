@@ -1,11 +1,21 @@
 import { MoveRightIcon } from 'lucide-react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { projects as _projects } from '@/app/projects';
-import { ProjectCardProps, ProjectTable } from '@/components/shared/project-table';
+import { ProjectTable } from '@/components/shared/project-table';
 import { Button } from '@/components/ui/button';
 import { Field, FieldLabel } from '@/components/ui/field';
 import { Progress } from '@/components/ui/progress';
+
+export const metadata: Metadata = {
+  title: 'Emir Güvenni — Full Stack Developer',
+  description:
+    'Full-stack developer. I build web systems, admin interfaces and automations with a focus on performance, simplicity and user experience.',
+  openGraph: {
+    url: 'https://emirguvenni.com',
+  },
+};
 
 export default function Home() {
   const currentFocus = {
@@ -17,7 +27,7 @@ export default function Home() {
     progress: 12,
   };
 
-  const projects = _projects.slice(0, 2);
+  const projects = _projects.slice(0, 3);
 
   return (
     <div className="container mx-auto my-12 space-y-16 px-6 lg:space-y-28">
