@@ -18,7 +18,7 @@ export const projects: (ProjectCardProps & { categories: string[] })[] = [
     status: 'Maintained',
     stack: ['Next.js', 'Express.js', 'Socket.IO'],
     year: 2024,
-    image: '/planla_logo.jpg',
+    image: '/planla_logo.png',
     categories: ['web'],
   },
   {
