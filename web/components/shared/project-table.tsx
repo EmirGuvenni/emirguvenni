@@ -20,6 +20,7 @@ export interface ProjectCardProps {
     | 'On Hold'
     | 'Deprecated';
   image?: string;
+  unoptimizedImage?: boolean;
   stack: string[];
   year: number;
 }
@@ -57,7 +58,7 @@ export function ProjectTable({ projects }: { projects: ProjectCardProps[] }) {
                   height={48}
                   className="h-12 min-h-12 w-12 min-w-12 rounded-md object-cover"
                   style={{ imageRendering: 'pixelated' }}
-                  unoptimized
+                  unoptimized={project.unoptimizedImage ?? false}
                 />
               ) : (
                 <span className="bg-primary text-primary-foreground flex h-12 min-h-12 w-12 min-w-12 items-center justify-center rounded-md text-2xl font-semibold uppercase">

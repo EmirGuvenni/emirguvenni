@@ -8,7 +8,7 @@ export const projects: (ProjectCardProps & { categories: string[] })[] = [
     status: 'On Hold (Live)',
     stack: ['Next.js', 'Fastify'],
     year: 2025,
-    image: 'https://invest.papara.com/favicons/icon-32.png',
+    image: '/papara_logo.jpg',
     categories: ['web'],
   },
   {
@@ -18,7 +18,7 @@ export const projects: (ProjectCardProps & { categories: string[] })[] = [
     status: 'Maintained',
     stack: ['Next.js', 'Express.js', 'Socket.IO'],
     year: 2024,
-    image: 'https://www.planla.io/favicon.ico',
+    image: '/planla_logo.jpg',
     categories: ['web'],
   },
   {
@@ -28,8 +28,8 @@ export const projects: (ProjectCardProps & { categories: string[] })[] = [
     status: 'Maintained',
     stack: ['Vue.js'],
     year: 2021,
-    image:
-      'https://raw.githubusercontent.com/EmirGuvenni/type-streak/refs/heads/main/public/favicon.ico',
+    image: 'type-streak_logo.jpg',
+    unoptimizedImage: true,
     categories: ['web'],
   },
   {
