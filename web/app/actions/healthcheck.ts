@@ -14,7 +14,7 @@ async function check(url: string, validate?: (d: unknown) => boolean): Promise<H
       const data = await res.json();
       if (!validate(data)) return 'Offline';
     }
-    return elapsed > 1000 ? 'Degraded' : 'Healthy';
+    return elapsed > 2000 ? 'Degraded' : 'Healthy';
   } catch {
     return 'Offline';
   }
