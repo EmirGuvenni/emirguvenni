@@ -1,11 +1,13 @@
 'use server';
 
+import { cacheLife } from 'next/cache';
+
 export type HealthStatus = 'Healthy' | 'Degraded' | 'Offline';
 
 async function check(url: string, validate?: (d: unknown) => boolean): Promise<HealthStatus> {
   try {
     const start = Date.now();
-    const res = await fetch(url, { next: { revalidate: 60 }, signal: AbortSignal.timeout(5000) });
+    const res = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(10_000) });
     const elapsed = Date.now() - start;
     if (!res.ok) return 'Offline';
     if (validate) {
@@ -23,6 +25,8 @@ export async function checkAllHealth(): Promise<{
   planlaBackend: HealthStatus;
   typeStreak: HealthStatus;
 }> {
+  'use cache';
+  cacheLife({ revalidate: 60, expire: 60 });
   const [planlaFrontend, planlaBackend, typeStreak] = await Promise.all([
     check('https://planla.io'),
     check('https://api.planla.io/settings', (d) => (d as { success?: boolean }).success === true),
